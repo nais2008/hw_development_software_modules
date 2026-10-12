@@ -1,0 +1,32 @@
+<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Главное меню" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Учебное WPF-приложение"
+                   HorizontalAlignment="Center"
+                   Margin="0,45,0,0"
+                   VerticalAlignment="Top"
+                   FontSize="28" />
+        <TextBlock Text="Выберите задание"
+                   HorizontalAlignment="Center"
+                   Margin="0,105,0,0"
+                   VerticalAlignment="Top"
+                   FontSize="16" />
+        <Button Content="Задание 1. Калькулятор расходов"
+                Margin="0,155,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="OpenExpenses_Click" />
+        <Button Content="Задание 2. Таймер обратного отсчета"
+                Margin="0,210,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="OpenTimer_Click" />
+        <Button Content="Задание 3. Викторина"
+                Margin="0,265,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Click="OpenQuiz_Click" />
+    </Grid>
+</Window>

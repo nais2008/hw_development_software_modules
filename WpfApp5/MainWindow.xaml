@@ -1,0 +1,39 @@
+<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Кофейня - расчёт заказа" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Left" Margin="10" VerticalAlignment="Top">
+                <TextBlock Text="Напиток" Margin="0,0,0,5" />
+                <ComboBox x:Name="BeverageComboBox" Margin="0,0,0,15" />
+
+                <TextBlock Text="Объём" Margin="0,0,0,5" />
+                <RadioButton x:Name="SmallVolumeRadioButton" Content="Маленький (200 мл)" IsChecked="True" Tag="Small" Margin="0,0,0,5" />
+                <RadioButton x:Name="MediumVolumeRadioButton" Content="Средний (300 мл)" Tag="Medium" Margin="0,0,0,5" />
+                <RadioButton x:Name="LargeVolumeRadioButton" Content="Большой (400 мл)" Tag="Large" Margin="0,0,0,15" />
+
+                <CheckBox x:Name="SyrupCheckBox" Content="Добавить сироп" Margin="0,0,0,5" />
+                <ComboBox x:Name="SyrupComboBox" Margin="0,0,0,15" />
+                <CheckBox x:Name="CinnamonCheckBox" Content="Добавить корицу" Margin="0,0,0,15" />
+
+                <TextBlock Text="Количество порций" Margin="0,0,0,5" />
+                <TextBox x:Name="QuantityTextBox" Text="1" Margin="0,0,0,15" />
+                <Button Content="Добавить в заказ" Click="AddToOrderButton_Click" />
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Right" Margin="10" VerticalAlignment="Bottom">
+                <Button Content="Удалить выбранное" Click="RemoveSelectedButton_Click" Margin="0,0,0,15" />
+                <TextBlock Text="Общая стоимость:" Margin="0,0,0,5" />
+                <TextBlock x:Name="TotalCostTextBlock" Text="0,00 руб." Margin="0,0,0,15" />
+                <TextBlock Text="Общее количество напитков:" Margin="0,0,0,5" />
+                <TextBlock x:Name="TotalDrinksTextBlock" Text="0" />
+            </StackPanel>
+
+            <ListBox x:Name="OrderListBox" Margin="10" />
+        </DockPanel>
+    </Grid>
+</Window>
